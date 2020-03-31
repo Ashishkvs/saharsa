@@ -127,33 +127,33 @@
                     </table>
                 </div>
             <p class="small text-muted"><b>Note: </b>Your order and further process will be whatsapp to your given number</p>
-            <form>
+            <form action="order.php" method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputName">Name</label>
-                            <input type="name" class="form-control" id="inputName" required>
+                            <input type="name" class="form-control"value="Ashish"  name="inputName" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="mobile">Mobile</label>
-                            <input type="text" class="form-control" id="mobile" onchange="validateField();" required>
+                            <input type="text" class="form-control" value="8599894881"  name="mobile" onchange="validateField();" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" required placeholder="Xyz street near by Temple or School">
+                        <input type="text" class="form-control" value="Batrahar near rlwy colony" name="inputAddress" required placeholder="Xyz street near by Temple or School">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-2">
                             <label for="inputZip">WardNo</label>
-                            <input type="text" class="form-control" id="inputWard" required>
+                            <input type="text" class="form-control"  value="26" name="inputWard" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity" value="SAHARSA" disabled>
+                            <input type="text" class="form-control" name="inputCity" value="SAHARSA" disabled>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
+                            <select name="inputState" class="form-control">
                                 <option selected>BIHAR</option>
                             </select>
                         </div>
