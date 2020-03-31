@@ -18,6 +18,7 @@ function tableDataAsJson() {
     // return listToEmailParty;
 }
 
+
 var orderList = [];
 function addToCart(product) {
     data = {};

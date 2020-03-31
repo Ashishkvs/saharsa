@@ -15,9 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mobile = test_input($_POST["mobile"]);
     $wardNo = test_input($_POST["inputWard"]);
     $address = test_input($_POST["inputAddress"]);
-        // echo "$name+$mobile+$wardNo+$address";
+    $orders = $_POST["orders"];
+    // echo $orders;
 
-$sql = "INSERT INTO customer (name, mobile, wardno, address, city, state, order_request) VALUES ('$name','$mobile',$wardNo,'$address','SAHARSA','BIHAR','Dummy ordeer')";
+$sql = "INSERT INTO customer (name, mobile, wardno, address, city, state, order_request) VALUES ('$name','$mobile',$wardNo,'$address','SAHARSA','BIHAR','$orders')";
 
 
 if ($conn->query($sql) === true) {
