@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $wardNo = test_input($_POST["inputWard"]);
     $address = test_input($_POST["inputAddress"]);
     $orders = $_POST["orders"];
-    // echo $orders;
 
 $sql = "INSERT INTO customer (name, mobile, wardno, address, city, state, order_request) VALUES ('$name','$mobile',$wardNo,'$address','SAHARSA','BIHAR','$orders')";
 
