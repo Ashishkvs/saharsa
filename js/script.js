@@ -18,7 +18,19 @@ function tableDataAsJson() {
     // return listToEmailParty;
 }
 
-
+function validateField() {
+    let mob = $('#mobile').val();
+    console.log(mob);
+    let phoneno = /^\d{10}$/;
+    if (mob.match(phoneno)) {
+        return true;
+    }
+    else {
+        alert("Not a valid Phone Number");
+        $('#mobile').val("");
+        return false;
+    }
+}
 var orderList = [];
 function addToCart(product) {
     data = {};

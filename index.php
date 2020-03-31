@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -25,10 +23,12 @@
     $(document).ready(function () {
         $('#myTable').DataTable();
     });
-   </script>
+
+    //form submit
+</script>
     <div class="container-fluid">
 
-                
+
                 <div class="row">
                     <div class="col-md-7 col">
                         <h1 class="bg-warning p-1">Items</h1>
@@ -128,7 +128,7 @@
                 </div>
             <p class="small text-muted"><b>Note: </b>Your order and further process will be whatsapp to your given number</p>
             <p id="message" class="text-center bg-danger"></p>
-            <form action="order.php" method="post">
+            <form action="order.php" id="orderForm" method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputName">Name</label>
@@ -158,43 +158,26 @@
                                 <option selected>BIHAR</option>
                             </select>
                         </div>
-                       
+
                     </div>
                     <input type="text" hidden name="orders" id="orders">
-                    <button type="submit" class="btn btn-primary">Place order</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Place order</button>
                 </form>
             </div>
     </div>
-    <!-- <button onclick="tableDataAsJson();">Table Json</button> -->
-    <!-- <ul class="mylist">
 
-    </ul> -->
-   <script>
-    function validateField(){
-        let mob = $('#mobile').val();
-        console.log(mob);
-        let phoneno = /^\d{10}$/;
-        if (mob.match(phoneno)) {
-            return true;
+<script>
+ $("#orderForm").submit(function( event ) {
+        let tempOrder =JSON.stringify(orderList);
+        $("#orders").val(tempOrder);
+        if(orderList.length > 0){
+            console.log(orderList);
+            return;
         }
-        else {
-            alert("Not a valid Phone Number");
-             $('#mobile').val("");
-            return false;
-        }
-    }
-//form submit
-$( "form" ).submit(function( event ) {
-let tempOrder =JSON.stringify(orderList);
-$("#orders").val(tempOrder);
-if(orderList.length > 0){
-    console.log(orderList);
-    return;
-}
-  $( "#message" ).text( "Empty order cannot be placed" ).show().fadeOut( 5000 );
-  event.preventDefault();
+        $( "#message" ).text( "Empty order cannot be placed" ).show().fadeOut( 5000 );
+        event.preventDefault();
 
-});
+        });
 
    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
