@@ -11,107 +11,119 @@
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
     <title>Online Saharsa</title>
 
     <style>
+        body {
+            min-height: auto;
+            padding-top: 4.5rem;
+        }
         #myTable thead{background-color:dodgerblue;}
+        .responsive-width{
+            font-size: 3vw;
+        }
+        .social-part .fa{
+            padding-right:20px;
+        }
+        ul li a{
+            margin-right: 20px;
+        }
+
     </style>
 </head>
 
 <body>
-   <script >
-    $(document).ready(function () {
-        $('#myTable').DataTable();
-    });
-
-    //form submit
-</script>
+  <?php include_once 'header.php';?>
+  
     <div class="container-fluid">
+      
 
 
                 <div class="row">
-                    <div class="col-md-7 col">
-                        <h1 class="bg-warning p-1">Items</h1>
-                        <table id="myTable" class="table table-sm table-hover">
+                    <div class="col-md-7 border col ">
+                        <h1 class="bg-secondary sm p-1">Items</h1>
+                        <table id="myTable" class="table  table-hover table-responsive-sm">
                             <thead>
                                 <tr>
-                                    <th>Item</th>
-                                    <th>Quantity</th>
-                                    <th>Unit</th>
-                                    <th>Order</th>
+                                    <th scope="col" >Item</th>
+                                    <th scope="col" >Quantity</th>
+                                    <th scope="col" >Unit</th>
+                                    <th scope="col" >Order</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Potato / Aloo</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Tomato</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Onion</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Daal (Toor)</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
-                                    <td>Daal (Arhar)</td>
-                                    <td><input type="text"></td>
+                                    <td>Daal (Chana)</td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Rice / Chawal</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Salt / Namak</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Sugar / Chini</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Atta / Flour</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Kg</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Milk</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Lt</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                                 <tr>
                                     <td>Water</td>
-                                    <td><input type="text"></td>
+                                    <td><input class="form-control" type="text"></td>
                                     <td>Can</td>
-                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success">Add To Cart</button></td>
+                                    <td><button onclick="addToCart(this)" class="btn btn-outline-success btn-sm">Add</button></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                <div class="col-md-4 offset-md-1 p-1 col">
+                <div class="col-md-4 offset-md-1 p-1 col shadow p-3 mb-5 bg-white rounded">
                 <h1 class="bg-warning pl-2">Your order</h1>
                 <div class="table-bordered table-responsive">
                     <table id="orderTable" class="table table-sm table-borderless">
@@ -161,11 +173,17 @@
 
                     </div>
                     <input type="text" hidden name="orders" id="orders">
-                    <button type="submit" name="submit" class="btn btn-primary">Place order</button>
+                    <button type="submit" name="submit" class="btn btn-success btn-block ">Place order</button>
                 </form>
             </div>
     </div>
+ <script >
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
 
+    //form submit
+</script>
 <script>
  $("#orderForm").submit(function( event ) {
         let tempOrder =JSON.stringify(orderList);
@@ -186,6 +204,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+</div>
+<?php include_once 'footer.php'; ?>
 </body>
 
 </html>
